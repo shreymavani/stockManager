@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri : mongodb+srv://Shrey:Shrey@mahavirstockmanager.cwfr0zd.mongodb.net/?retryWrites=true&w=majority
+      database : MahavirStocks
