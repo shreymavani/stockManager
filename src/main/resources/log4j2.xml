@@ -1,0 +1,19 @@
+<Configuration name="baeldung" packages="" status="debug">
+  <Appenders>
+    <Console name="stdout" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %p %m%n"/>
+    </Console>
+    <File append="true" fileName="appLogs.log" name="LogFiles">
+      <PatternLayout>
+        <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
+      </PatternLayout>
+    </File>
+  </Appenders>
+
+  <Loggers>
+    <Root level="WARN">
+      <AppenderRef ref="stdout"/>
+      <AppenderRef ref="fout"/>
+    </Root>
+  </Loggers>
+</Configuration>
