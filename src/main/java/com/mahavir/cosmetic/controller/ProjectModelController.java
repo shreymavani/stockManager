@@ -37,19 +37,19 @@ public class ProjectModelController {
     }
 
 
-    @GetMapping("/totalRequiredStockForProductionPlans")
+    @PostMapping("/totalRequiredStockForProductionPlans")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Map<String, Long> productionPlanConsumptionReturnTotalQuantity(@RequestBody List<String> modelIds) {
         return projectModelService.totalQuantityRequired(modelIds);
     }
 
-    @GetMapping("/availableStockInWareHouseThatIsRequiredForProductionPlan")
+    @PostMapping("/availableStockInWareHouseThatIsRequiredForProductionPlan")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Map<String, Long> productionPlanConsumptionReturnCurrentQuantityInWareHouse(@RequestBody List<String> modelIds) {
         return projectModelService.currentQuantityInStock(modelIds);
     }
 
-    @GetMapping("/possibleNumberTillProductionCanDone")
+    @PostMapping("/possibleNumberTillProductionCanDone")
     @ResponseStatus(HttpStatus.ACCEPTED)
 //    public Map<String, String> productionPlanConsumptionPossible(@RequestBody List<String> modelIds) {
     public String productionPlanConsumptionPossible(@RequestBody List<String> modelIds) {
